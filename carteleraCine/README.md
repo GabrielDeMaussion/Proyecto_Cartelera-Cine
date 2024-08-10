@@ -149,10 +149,11 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 
 
 ### /Funcion
-- __getAllFuncionesDisponiblesByLocal(idLocal)__
+- __getAllFuncionesDisponiblesByEstablecimiento(idEstablecimiento)__
 - __getAllFuncionesDisponiblesByPelicula(idPelicula)__
 - __postFuncion(postFuncionDto)__
 - __putFuncion(idFuncion, putFuncionDto)__
+- __putEstadoFuncion(idFuncion, estado)__
 
 ### /Genero
 - __getAllGeneros()__
@@ -165,10 +166,18 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 ### /Pelicula
 - __getAllPeliculasActivas()__
 - __postPelicula(postPeliculaDto)__
+- __putPelicula(putPeliculaDto)__
+- __putDesactivarPelicula(idPelicula)__
 
 ### /Promocion
+- __getAllPromociones()__
+- __postPromocion(postPromocionDto)__
+- __putPromocion(putPromocionDto)__
+- ~~__putBorrarPromocion(idPromocion)__~~
 
 ### /Sala
+- __getAllSalasByEstablecimiento(idEstablecimiento)__
+- __getSalaByEstablecimientoAndPelicula()__
 
 ### /Suscripcion
 
