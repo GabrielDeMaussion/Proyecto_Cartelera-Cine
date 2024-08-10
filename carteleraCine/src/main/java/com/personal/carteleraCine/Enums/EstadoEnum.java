@@ -1,7 +1,8 @@
 package com.personal.carteleraCine.Enums;
 
-public enum ActivoEnum {
-    Programada,
+public enum EstadoEnum {
+    Proximamente,
+    Disponible,
     Emitiendose,
     Finalizada,
     Cancelada;
