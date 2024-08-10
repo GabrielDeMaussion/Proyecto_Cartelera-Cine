@@ -27,4 +27,7 @@ public abstract class ProductoEntity {
 
     @Column
     private Double precio;
+
+    @Column
+    private Boolean activo;
 }

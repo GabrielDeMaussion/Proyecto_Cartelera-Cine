@@ -38,4 +38,7 @@ public abstract class UsuarioEntity {
 
     @OneToMany(mappedBy = "usuario")
     private List<CompraEntity> lCompras;
+
+    @Column
+    private Boolean activo;
 }
