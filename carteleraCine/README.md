@@ -28,6 +28,7 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `fechaHoraCompra`: LocalDateTime
 - `lDetalles`: Lista de Detalles
 - `total`: Double
+- `activa`: Boolean
 
 ### Detalle
 - `idDetalle`: Long
@@ -106,6 +107,47 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `nombre`: String
 - `apellido`: String
 - `dni`: String
+- `Activo`: Boolean
 
 
 ## Métodos
+
+
+## DTOs
+
+### Get
+- `Butaca`
+- `Cliente`
+- `Comestible`
+- `Compra`
+- `Detalle`
+- `Empleado`
+- `Entrada`
+- `Establecimiento`
+- `Funcion`
+- `Genero`
+- `Pelicula`
+- `Promocion`
+- `Sala`
+- `Suscripcion`
+- `Tienda`
+
+### Post
+- `Cliente`
+- `Compra`
+- `Detalle`
+- `Empleado`
+- `Entrada`
+- `Funcion`
+- `Pelicula`
+- `Promocion`
+- `Tienda`
+
+### Put
+- `Cliente`
+- `Comestible`
+- `Empleado`
+- `Funcion`
+- `Pelicula`
+- `Promocion`
+- `Tienda`
