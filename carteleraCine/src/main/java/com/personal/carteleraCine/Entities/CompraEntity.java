@@ -31,4 +31,7 @@ public class CompraEntity {
 
     @Column
     private Double total;
+
+    @Column
+    private Boolean anulada;
 }

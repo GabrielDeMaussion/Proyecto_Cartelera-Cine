@@ -22,6 +22,4 @@ public class ClienteEntity extends UsuarioEntity{
 
     @Column(name = "fecha_nac")
     private LocalDate fechaNacimiento;
-
-
 }
