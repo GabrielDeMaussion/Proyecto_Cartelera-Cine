@@ -1,6 +1,7 @@
 package com.personal.carteleraCine.Dtos.Get;
 
 import com.personal.carteleraCine.Entities.CompraEntity;
+import com.personal.carteleraCine.Enums.AuthEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -17,8 +18,6 @@ public class GetEmpleadoDto {
 
     private String correo;
 
-    private String contraseña;
-
     private String nombre;
 
     private String apellido;
@@ -28,4 +27,6 @@ public class GetEmpleadoDto {
     private List<CompraEntity> lCompras;
 
     private Boolean activo;
+
+    private AuthEnum autorizacion;
 }

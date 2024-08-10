@@ -1,16 +1,17 @@
 package com.personal.carteleraCine.Dtos.Get;
 
+import com.personal.carteleraCine.Entities.CompraEntity;
 import com.personal.carteleraCine.Enums.AuthEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetClienteDto {
+public class GetAdminDto {
     private Long idUsuario;
 
     private String correo;
@@ -21,11 +22,9 @@ public class GetClienteDto {
 
     private String dni;
 
-    private LocalDate fechaNacimiento;
+    private List<CompraEntity> lCompras;
 
-    private GetSuscripcionDto suscripcion;
-
-    private Integer puntos;
+    private Boolean activo;
 
     private AuthEnum autorizacion;
 }

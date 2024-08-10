@@ -32,6 +32,10 @@ public class CompraEntity {
     @Column
     private Double total;
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private UsuarioEntity vendedor;
+
     @Column
     private Boolean anulada;
 }

@@ -18,5 +18,7 @@ public class GetCompraDto {
 
     private Double total;
 
+    private GetVendedorDto vendedor;
+
     private Boolean anulada;
 }
