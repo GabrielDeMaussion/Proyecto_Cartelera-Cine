@@ -28,7 +28,7 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `fechaHoraCompra`: LocalDateTime
 - `lDetalles`: Lista de Detalles
 - `total`: Double
-- `activa`: Boolean
+- `anulada`: Boolean
 
 ### Detalle
 - `idDetalle`: Long
@@ -58,11 +58,13 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `idioma`: Enum (ESPAÑOL, INGLES, ALEMAN, PORTUGUES, JAPONES, MANDARIN)
 - `subtitulada`: Enum (NOSUB, SUBESPAÑOL, SUBINGLES, SUBALEMAN, SUBPORTUGUES, SUBJAPONES, SUBMANDARIN)
 - `audioDescriptiva`: Boolean
-- `activo`: Enum (PROGRAMADA, EMITIENDOSE, FINALIZADA, CANCELADA)
+- `estado`: Enum (PROXIMAMENTE, DISPONIBLE, EMITIENDOSE, FINALIZADA, CANCELADA)
 
 ### Genero
 - `idGenero`: Long
 - `nombre`: String
+
+### Merch (extiende Producto)
 
 ### Pelicula
 - `idPelicula`: Long
@@ -77,6 +79,7 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `nombre`: String
 - `descripcion`: String
 - `precio`: Double
+- `activo`: Boolean
 
 ### Promocion
 - `idPromocion`: Long
@@ -98,8 +101,6 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `descripcion`: String
 - `precio`: Double
 
-### Tienda (extiende Producto)
-
 ### Usuario (Abstracto)
 - `idUsuario`: Long
 - `correo`: String
@@ -110,13 +111,82 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `Activo`: Boolean
 
 
-## Métodos
+## /Endpoints [WIP]
+
+### /Butaca
+- __getAllButacasFromSala(idSala)__
+- __getButacaById(idButaca)__
+
+### /Cliente
+- __getAllClientes()__
+- __postCliente(postClienteDto)__
+- __putCliente(idUsuario, putClienteDto)__
+
+### /Comestible
+- __getAllComestible()__
+- __getComestibleById(idProducto)__
+- __putComestible(idProducto, putComestibleDto)__
+- __putBorrarComestible(idProducto)__
+
+### /Compra
+- __getAllComprasByUsuario(idUsuario)__
+- __postCompra(postCompraDto)__
+- __putBajaCompra(idCompra)__
+
+### /Empleado
+- __getEmpleadoById(idEmpleado)__
+- __postEmpleado(postEmpleadoDto)__
+- __putEmpleado(idUsuario, putEmpleadoDto)__
+
+### /Entrada
+- __getAllEntradasByFuncion(idFuncion)__
+- __postEntrada(postEntradaDto)__
+- __putBorrarEntrada(idProducto)__
+
+### /Establecimiento
+- __getAllEstablecimientos()__
+- __getEstablecimientoById(idEstablecimiento)__
+
+
+### /Funcion
+- __getAllFuncionesDisponiblesByLocal(idLocal)__
+- __getAllFuncionesDisponiblesByPelicula(idPelicula)__
+- __postFuncion(postFuncionDto)__
+- __putFuncion(idFuncion, putFuncionDto)__
+
+### /Genero
+- __getAllGeneros()__
+
+### /Merch
+- __getAllMerchActivo()__
+- __putMerch(idProducto, putMerchDto)__
+- __putBorrarMerch(idProducto)__
+
+### /Pelicula
+- __getAllPeliculasActivas()__
+- __postPelicula(postPeliculaDto)__
+
+### /Promocion
+
+### /Sala
+
+### /Suscripcion
+
+### /Login
+- __postLogin(loginDto)__
+- __putClave(idUsuario, putClaveDto)__
+
+
+
+
 
 
 ## DTOs
 
 ### Get
+- `Admin`
 - `Butaca`
+- `ButacaEstado`
 - `Cliente`
 - `Comestible`
 - `Compra`
@@ -126,11 +196,11 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `Establecimiento`
 - `Funcion`
 - `Genero`
+- `Merch`
 - `Pelicula`
 - `Promocion`
 - `Sala`
 - `Suscripcion`
-- `Tienda`
 
 ### Post
 - `Cliente`
@@ -139,15 +209,17 @@ El proyecto platea ofrecer a los usuarios una página web en la que se puedan lo
 - `Empleado`
 - `Entrada`
 - `Funcion`
+- `Merch`
 - `Pelicula`
 - `Promocion`
-- `Tienda`
 
 ### Put
 - `Cliente`
 - `Comestible`
 - `Empleado`
 - `Funcion`
+- `Merch`
 - `Pelicula`
 - `Promocion`
-- `Tienda`
+
+### 
